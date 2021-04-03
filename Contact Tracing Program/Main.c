@@ -1,7 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <Windows.h>
+
 #pragma warning(disable:4996)
+
+void clear_screen()
+{
+	system("cls");
+}
 
 void footer()
 {
@@ -18,18 +24,13 @@ void footer()
 		t.wDay,t.wMonth,t.wYear,t.wHour,t.wMinute);
 }
 
-void visitorInfo()
-{
-
-}
-
-void main()
+void mainMenu()
 {
 	char userResponse;
 	int choice;
 	do {
 		do {
-			system("cls");
+			clear_screen();
 			printf("Welcome To Crimson Contact Tracing System\n");
 			printf("-----------------------------------------\n");
 			printf("                Main Menu\n\n");
@@ -70,4 +71,10 @@ void main()
 		rewind(stdin);
 	} while (toupper(userResponse) != 'E');
 	footer();
+}
+
+void main()
+{
+	SetConsoleTitle(L"Crimson Contact Tracing System");
+	mainMenu();
 }

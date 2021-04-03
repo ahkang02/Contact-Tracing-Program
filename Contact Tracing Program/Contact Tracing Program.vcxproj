@@ -139,7 +139,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Administrative Information.c" />
     <ClCompile Include="Main.c" />
+    <ClCompile Include="Sanitization Information.c" />
+    <ClCompile Include="Venue Information.c" />
+    <ClCompile Include="Visitor Information.c" />
+    <ClCompile Include="Visits and Exits Information.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Commonly Used Struct.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
